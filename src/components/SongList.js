@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 class SongList extends React.Component {
   render() {
+    // this.props === { songs: state.songs }
     return <div>SongList</div>;
   }
 }
@@ -13,8 +14,7 @@ const mapStateToProps = (state) => {
   // essentially all of the data inside our Redux store
   // and run some computation on it, which will make our data
   // show up as props inside of our component
-  console.log(state);
-  return state;
+  return { songs: state.songs };
 };
 
 
